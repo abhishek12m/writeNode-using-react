@@ -62,3 +62,37 @@ header {
     display: none;
   }
 }
+
+.card{
+  border-radius: 5px;
+  box-shadow: #F2EBE9 0px 1px 4px;
+  padding: 10px;
+  margin: 20px 5px;
+}
+
+.card .title{
+  font-size: 20px;
+  margin: 20px 5px;
+  font-weight: 600;
+}
+.card .description{
+  font-size: 16px;
+  margin: 20px 5px;
+}
+.card .control{
+  font-size: 16px;
+  margin: 16px 5px;
+  display: flex;
+  justify-content: space-between;
+}
+.card .control .author{
+  background-color: #1c59ae13;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.card .control .delete{
+  color: #ff4747;
+  cursor: pointer;
+}
