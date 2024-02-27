@@ -96,3 +96,46 @@ header {
   color: #ff4747;
   cursor: pointer;
 }
+footer{
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #F2EBE9;
+}
+
+.create .heading{
+  text-align: center;
+  font-size: 22px;
+  margin-top: 20px;
+}
+
+.createPost {
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+  margin: 20px auto;
+}
+.createPost .title,
+.createPost .description{
+  font-size: 20px;
+  margin: 10px 0;
+  padding: 10px;
+  border: none;
+  box-shadow: #F2EBE9 0px 1px 4px;
+  border-radius: 5px;
+  
+}
+.createPost .description{
+  height: 300px;
+}
+.createPost button{
+  font-size: 20px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #5FD068;
+  padding: 15px 20px;
+  color: #fff;
+  cursor: pointer;
+}
