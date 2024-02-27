@@ -139,3 +139,26 @@ footer{
   color: #fff;
   cursor: pointer;
 }
+.pagenotfound{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  max-width: 400px;
+  text-align: center;
+}
+.pagenotfound p{
+  margin: 25px auto;
+  font-size: 25px;
+  font-weight: 500;
+  /* border-bottom: 1px solid #F2EBE9; */
+  /* padding: 10px; */
+}
+.pagenotfound button{
+  border: none;
+  border-radius: 5px;
+  padding: 8px 10px;
+  background-color: #1C59AE;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+}
