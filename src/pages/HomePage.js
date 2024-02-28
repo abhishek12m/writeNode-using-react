@@ -2,8 +2,10 @@ import { useEffect, useRef, useState } from "react"
 import { PostCard } from "../components"
 import { getDocs, collection } from "firebase/firestore";
 import { db } from "../firbase/config";
+import { useTitle } from "../hooks/useTitle";
 
 export const HomePage = () => {
+    useTitle("Home")
     const [posts, setPosts] = useState([]);
     const [toggle,setToggle]=useState(false);
     const postsRef = useRef(collection(db, "posts"));
