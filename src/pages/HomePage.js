@@ -15,8 +15,9 @@ export const HomePage = () => {
             )))
         }
         getPosts();
+        console.log("--")
 
-    }, [postsRef]);
+    }, []);
     return (
         <section>
             {posts.map((post) => (
