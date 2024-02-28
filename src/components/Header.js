@@ -8,7 +8,7 @@ export const Header = () => {
     const [isAuth,setIsAuth]=useState(JSON.parse(localStorage.getItem("isAuth")) || false);
     function handleLogin(){
         signInWithPopup(auth,provider).then((result)=>{
-            console.log(result);
+            // console.log(result);
             setIsAuth(true);
             localStorage.setItem("isAuth",true);
             navigate("/");
