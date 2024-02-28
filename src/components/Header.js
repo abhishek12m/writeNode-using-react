@@ -10,6 +10,7 @@ export const Header = () => {
             <nav className='nav'>
                 <NavLink to="/" className="link" end>Home</NavLink>
                 <NavLink to="/create" className="link">Create Post</NavLink>
+                <button className='auth'><i className='bi bi-box-arrow-right'></i>Logout</button>
                 <button className='auth'><i className='bi bi-google'></i>Login</button>
             </nav>
         </header>
