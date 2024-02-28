@@ -1,23 +1,25 @@
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import {auth,provider} from '../firbase/config';
 import { signInWithPopup,signOut } from 'firebase/auth';
 import logo from '../assets/logo.jpg';
 import { useState } from 'react';
 export const Header = () => {
+    const navigate=useNavigate();
     const [isAuth,setIsAuth]=useState(JSON.parse(localStorage.getItem("isAuth")) || false);
-
     function handleLogin(){
         signInWithPopup(auth,provider).then((result)=>{
             console.log(result);
             setIsAuth(true);
             localStorage.setItem("isAuth",true);
+            navigate("/");
         })
     }
     function handleLogout(){
         signOut(auth);
         setIsAuth(false);
-        console.log("logout")
+        // console.log("logout")
         localStorage.setItem("isAuth",false);
+        navigate("/");
     }
     return (
         <header>

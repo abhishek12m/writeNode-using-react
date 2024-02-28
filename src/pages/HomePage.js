@@ -1,15 +1,16 @@
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { PostCard } from "../components"
 import { getDocs, collection } from "firebase/firestore";
 import { db } from "../firbase/config";
 
 export const HomePage = () => {
     const [posts, setPosts] = useState([]);
-    const postsRef = collection(db, "posts");
+    const [toggle,setToggle]=useState(false);
+    const postsRef = useRef(collection(db, "posts"));
     useEffect(() => {
         async function getPosts() {
 
-            const data = await getDocs(postsRef);
+            const data = await getDocs(postsRef.current);
             setPosts(data.docs.map((document) => (
                 { ...document.data(), id: document.id }
             )))
@@ -17,11 +18,11 @@ export const HomePage = () => {
         getPosts();
         console.log("--")
 
-    }, []);
+    }, [postsRef,toggle]);
     return (
         <section>
             {posts.map((post) => (
-                <PostCard key={post.id} post={post} />
+                <PostCard key={post.id} post={post} toggle={toggle} setToggle={setToggle} />
             ))}
         </section>
     )
