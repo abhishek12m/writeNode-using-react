@@ -18,8 +18,6 @@ export const HomePage = () => {
             )))
         }
         getPosts();
-        console.log("--")
-
     }, [postsRef, toggle]);
     return (
         <section>
